@@ -1,0 +1,32 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ask Kursor</title>
+    <link rel="stylesheet" href="popup.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="popup-content">
+        <textarea type="text" id="selected-text-input"></textarea>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <!-- Display the selected text -->
+    <h1>Selected Text:</h1>
+    <p id="selected-text"></p>
+
+    <!-- Create a button to copy the selected text to clipboard -->
+    <button id="copy-button">Copy to clipboard</button>
+    <button id="share-button">Share</button>
+    <script src="popup.js"></script>
+</body>
+
+</html>
