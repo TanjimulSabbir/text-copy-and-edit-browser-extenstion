@@ -12,10 +12,11 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
         const centerY = window.screen.height / 2;
 
         // Calculate the left and top coordinates of the modal
-        const modalWidth = 500;
-        const modalHeight = 500;
+        const modalWidth = Math.floor(window.screen.width / 2);
+        const modalHeight = window.screen.height;
         const modalLeft = Math.floor(centerX - modalWidth / 2);
         const modalTop = Math.floor(centerY - modalHeight / 2);
+
 
         // Create the modal window
         chrome.windows.create({
