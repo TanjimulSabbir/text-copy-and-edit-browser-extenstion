@@ -68,3 +68,18 @@ instagramLink.addEventListener("click", function () {
     const shareUrl = `https://instragram.com/share?text=${encodeURIComponent(selectedText)}`;
     window.open(shareUrl, '_blank');
 });
+
+
+// Pdf
+document.getElementById('pdf-button').addEventListener('click', function () {
+    // Get the selected text
+
+    // Create a new jsPDF instance
+    const doc = new jsPDF();
+
+    // Add the selected text to the PDF document
+    doc.text(selectedText, 10, 10);
+
+    // Save the PDF document
+    doc.save('selected-text.pdf');
+});
