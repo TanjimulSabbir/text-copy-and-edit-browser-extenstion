@@ -16,7 +16,7 @@ copyButton.addEventListener("click", function () {
     textArea.select();
     document.execCommand("copy");
     document.body.removeChild(textArea);
-    alert("text copied")
+    alert("Text copied")
 });
 
 const selectedTextInput = document.getElementById("selected-text-input");

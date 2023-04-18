@@ -11,6 +11,9 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+
+
+
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -94,5 +97,30 @@ textarea {
 }
 
 #close {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
     cursor: pointer;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    /* CSS styles for dark mode */
+    body,
+    p,
+    textarea {
+        background-color: #1c1c1c;
+        color: #f0f0f0;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    /* CSS styles for light mode */
+    body,
+    p,
+    textarea {
+        background-color: #f0f0f0;
+        color: #1c1c1c;
+    }
 }
