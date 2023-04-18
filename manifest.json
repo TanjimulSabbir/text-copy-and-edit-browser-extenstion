@@ -4,10 +4,10 @@
     "version": "1.0",
     "description": "A simple chrome extension that allows users to select text and get more information about it.",
     "icons": {
-        "16": "question.png",
+        "16": "ask.png",
         "32": "faq.png",
         "48": "ask.png",
-        "128": "ask.png"
+        "128": "faq.png"
     },
     "permissions": [
         "contextMenus"

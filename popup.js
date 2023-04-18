@@ -21,7 +21,7 @@ copyButton.addEventListener("click", function () {
 const shareButton = document.getElementById('share-button');
 shareButton.addEventListener('click', () => {
     const selectedText = selectedTextElement.textContent;
-    const shareUrl = `https://example.com/share?text=${encodeURIComponent(selectedText)}`;
+    const shareUrl = `https://whatsapp.com/share?text=${encodeURIComponent(selectedText)}`;
     window.open(shareUrl, '_blank');
 });
 
