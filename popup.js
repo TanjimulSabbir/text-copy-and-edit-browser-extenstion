@@ -18,13 +18,6 @@ copyButton.addEventListener("click", function () {
     document.body.removeChild(textArea);
     alert("text copied")
 });
-const shareButton = document.getElementById('share-button');
-shareButton.addEventListener('click', () => {
-    const selectedText = selectedTextElement.textContent;
-    const shareUrl = `https://whatsapp.com/share?text=${encodeURIComponent(selectedText)}`;
-    window.open(shareUrl, '_blank');
-});
-
 
 const selectedTextInput = document.getElementById("selected-text-input");
 selectedTextInput.value = selectedText;
@@ -36,4 +29,42 @@ submitBtn.addEventListener("click", function () {
     console.log(editedText, "EditedText")
     const selectedTextElement = document.getElementById("selected-text");
     selectedTextElement.textContent = editedText;
+});
+
+// share text
+const shareButton = document.getElementById("share-button");
+const modal = document.getElementById("modal");
+const facebookLink = document.getElementById("facebook-link");
+const whatsappLink = document.getElementById("whatsapp-link");
+const instagramLink = document.getElementById("instagram-link");
+
+
+shareButton.addEventListener("click", function () {
+    modal.style.display = "block";
+});
+const closeBtn = document.getElementById("close");
+
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none"
+})
+
+facebookLink.addEventListener("click", function () {
+    // Share on Facebook code
+    const selectedText = selectedTextElement.textContent;
+    const shareUrl = `https://facebook.com/share?text=${encodeURIComponent(selectedText)}`;
+    window.open(shareUrl, '_blank');
+});
+
+whatsappLink.addEventListener("click", function () {
+    // Share on WhatsApp code
+    const selectedText = selectedTextElement.textContent;
+    const shareUrl = `https://whatsapp.com/share?text=${encodeURIComponent(selectedText)}`;
+    window.open(shareUrl, '_blank');
+});
+
+instagramLink.addEventListener("click", function () {
+    // Share on Instagram code
+    const selectedText = selectedTextElement.textContent;
+    const shareUrl = `https://instragram.com/share?text=${encodeURIComponent(selectedText)}`;
+    window.open(shareUrl, '_blank');
 });
