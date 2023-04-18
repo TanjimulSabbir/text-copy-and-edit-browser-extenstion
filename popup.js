@@ -74,12 +74,22 @@ instagramLink.addEventListener("click", function () {
 document.getElementById('pdf-button').addEventListener('click', function () {
     // Get the selected text
 
-    // Create a new jsPDF instance
-    const doc = new jsPDF();
+    var docDefinition = {
+        content: 'This is the text content of the PDF'
+    };
+    pdfMake.createPdf(docDefinition).open();
+    var docDefinition = {
+        content: [
+            {
+                text: 'This is the text content of the PDF',
+                fontSize: 14,
+                color: 'red',
+                alignment: 'center'
+            }
+        ]
+    };
 
-    // Add the selected text to the PDF document
-    doc.text(selectedText, 10, 10);
 
-    // Save the PDF document
-    doc.save('selected-text.pdf');
 });
+
+

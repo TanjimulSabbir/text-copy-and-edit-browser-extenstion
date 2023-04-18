@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' https://cdnjs.cloudflare.com https://cdnjs.cloudflare.com/ajax/libs/pdfmake/">
+
 </head>
 
 <body>
@@ -28,6 +31,8 @@
     <button id="share-button">Share</button>
     <button id="pdf-button">Convert to PDF</button>
 
+
+
     <div id="modal">
         <p id="close">Close ❌</p>
         <a href="#" class="social-link" id="facebook-link">Share on Facebook</a>
@@ -35,10 +40,8 @@
         <a href="#" class="social-link" id="instagram-link">Share on Instagram</a>
     </div>
 
-
     <script src="popup.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>
 </body>
 
 </html>
